@@ -4,10 +4,7 @@ from typing import List
 class Solution:
     def countElements(self, arr: List[int]) -> int:
         nums = set(arr)
-        count = 0
-        for item in arr:
-            if item + 1 in nums:
-                count += 1
+        count = len([item for item in arr if item + 1 in nums])
         return count
 
 
